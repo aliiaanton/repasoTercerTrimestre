@@ -1,0 +1,164 @@
+/* --- Paleta Verde Tierra/Pastel --- */
+:root {
+    --color-fondo-body: #f4f7f6; /* Gris muy claro, casi blanco verdoso */
+    --color-fondo-container: #ffffff; /* Blanco puro para contraste */
+    --color-titulos: #4A7C59; /* Verde bosque apagado / Musgo oscuro */
+    --color-texto-principal: #3f3f3f; /* Gris oscuro, no negro puro */
+    --color-primario-botones: #8FBC8F; /* Verde mar oscuro (pastel/apagado) */
+    --color-primario-botones-hover: #709670; /* Versión más oscura del anterior */
+    --color-secundario-botones: #A9D8B8; /* Verde menta pálido (pastel) */
+    --color-secundario-botones-hover: #8BC39A; /* Versión más oscura del anterior */
+    --color-enlaces: #556B2F; /* Verde oliva oscuro */
+    --color-borde-sutil: #d8e0d9; /* Gris verdoso muy claro para bordes */
+    --color-sombra: rgba(74, 124, 89, 0.15); /* Sombra con tinte verde */
+}
+
+/* Estilos generales que aplicarían a todas las páginas */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--color-fondo-body);
+    color: var(--color-texto-principal);
+}
+
+.container {
+    max-width: 850px;
+    margin: 30px auto;
+    background: var(--color-fondo-container);
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--color-sombra); /* Sombra con tinte verde */
+}
+
+h1, h2, h3 {
+    color: var(--color-titulos);
+    margin-bottom: 0.7em;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 2px solid var(--color-borde-sutil); /* Borde sutil verdoso */
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/* Estilos para la navegación en index.html */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 12px;
+}
+
+nav a {
+    display: block;
+    background-color: var(--color-primario-botones); /* Verde mar oscuro */
+    color: white; /* Texto blanco contrasta bien */
+    padding: 15px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500; /* Un poco más de peso */
+}
+
+nav a:hover {
+    background-color: var(--color-primario-botones-hover); /* Verde más oscuro */
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Sombra genérica ligera */
+}
+
+/* Estilo para el enlace de volver */
+.back-link a {
+    display: inline-block;
+    margin-bottom: 25px;
+    padding: 10px 18px;
+    background-color: var(--color-secundario-botones); /* Verde menta pálido */
+    color: var(--color-titulos); /* Texto verde oscuro para contraste */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.95em;
+    transition: background-color 0.3s ease;
+    border: 1px solid var(--color-primario-botones-hover); /* Borde sutil */
+}
+
+.back-link a:hover {
+    background-color: var(--color-secundario-botones-hover); /* Verde menta más oscuro */
+    color: white; /* Cambiar a blanco en hover */
+}
+
+/* Estilos básicos para botones generales (puedes usar primario o secundario) */
+button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: var(--color-primario-botones); /* Verde principal por defecto */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: var(--color-primario-botones-hover); /* Verde más oscuro */
+}
+
+/* Estilos para secciones */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9fbf9; /* Fondo casi blanco con mínimo tinte verde */
+    border: 1px solid var(--color-borde-sutil);
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-borde-sutil);
+    font-size: 0.9em;
+    color: #777; /* Gris medio para el texto del footer */
+}
+
+footer a {
+    color: var(--color-enlaces); /* Verde oliva oscuro para enlaces */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--color-titulos); /* Verde más oscuro al pasar */
+}
+
+/* Clases específicas para quizzes, flashcards, etc. irían aquí */
+.quiz-question {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px dashed var(--color-secundario-botones); /* Borde discontinuo menta */
+    border-radius: 5px;
+    background-color: #fdfdfd;
+}
+
+/* Ejemplo de botón alternativo (si quieres diferenciar) */
+button.secondary {
+    background-color: var(--color-secundario-botones);
+    color: var(--color-titulos);
+    border: 1px solid var(--color-primario-botones-hover);
+}
+button.secondary:hover {
+    background-color: var(--color-secundario-botones-hover);
+    color: white;
+}
