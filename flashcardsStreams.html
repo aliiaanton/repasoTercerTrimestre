@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para responsividad básica -->
+    <title>Flashcards Streams Java</title> <!-- Título actualizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="back-link">
+            <a href="home.html">← Volver al Menú Principal</a>
+        </div>
+
+        <h1>Flashcards Streams Java</h1> <!-- Título actualizado -->
+        <p style="text-align: center;">Haz clic en una tarjeta para ver la definición.</p>
+
+        <div class="flashcard-grid">
+
+            <!-- Flashcard 1: Interfaz Funcional -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Interfaz Funcional</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Definición</h2>
+                        <p>Interfaz con <strong>un solo método abstracto</strong> (SAM). Se puede anotar con <code>@FunctionalInterface</code> (opcional pero recomendado).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 2: Expresión Lambda -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Expresión Lambda</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Definición y Sintaxis</h2>
+                        <p>Implementación <strong>concisa</strong> (en línea) de una interfaz funcional. Sintaxis: <code>(parámetros) -> { cuerpo }</code> o <code>(parámetros) -> expresión</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 3: Predicate<T> -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Predicate<T></h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Propósito y Método</h2>
+                        <p>Evalúa una <strong>condición</strong> sobre un objeto T. Método: <code>boolean test(T t)</code>. Usado comúnmente en <code>filter()</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 4: Function<T, R> -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Function<T, R></h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Propósito y Método</h2>
+                        <p><strong>Transforma</strong> un objeto de tipo T en uno de tipo R. Método: <code>R apply(T t)</code>. Usado comúnmente en <code>map()</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 5: Consumer<T> -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Consumer<T></h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Propósito y Método</h2>
+                        <p>Realiza una <strong>acción</strong> (efecto secundario) con un objeto T, <strong>no devuelve</strong> nada (void). Método: <code>void accept(T t)</code>. Usado en <code>forEach()</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 6: Referencia a Método -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Referencia a Método</h2>
+                    </div>
+                    <div class="flashcard-back">
+                         <h2>¿Qué es?</h2>
+                        <p>Forma <strong>aún más corta</strong> que una lambda para referirse a un método existente. Sintaxis: <code>Clase::metodoEstatico</code>, <code>objeto::metodoInstancia</code>, <code>Clase::metodoInstancia</code>, <code>Clase::new</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 7: Interfaz Stream -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Interfaz Stream</h2>
+                    </div>
+                    <div class="flashcard-back">
+                         <h2>Definición</h2>
+                         <p>Secuencia de elementos que soporta operaciones de agregación (<code>filter</code>, <code>map</code>, <code>reduce</code>, etc.). <strong>No almacena</strong> elementos. Procesa datos de una fuente.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 8: Operaciones Intermedias -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Operaciones Intermedias</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Características y Ejemplos</h2>
+                        <p>Devuelven un <strong>nuevo Stream</strong>. Son <strong>"lazy"</strong> (perezosas, no se ejecutan hasta una op. terminal). Ej: <code>filter()</code>, <code>map()</code>, <code>sorted()</code>, <code>distinct()</code>, <code>limit()</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 9: Tuberías (Pipelines) -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Tuberías (Pipelines)</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Estructura</h2>
+                        <p>Cadena de operaciones de Stream: <strong>Fuente</strong> → 0+ <strong>Op. Intermedias</strong> → 1 <strong>Op. Terminal</strong>. Se evalúan de forma "lazy".</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 10: Operaciones Terminales -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Operaciones Terminales</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Características y Ejemplos</h2>
+                        <p><strong>Consumen</strong> el Stream. Producen un resultado o efecto secundario. Son <strong>"eager"</strong> (ansiosas, disparan la ejecución). Ej: <code>forEach()</code>, <code>collect()</code>, <code>reduce()</code>, <code>count()</code>, <code>findFirst()</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 11: filter() -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>filter()</h2>
+                    </div>
+                    <div class="flashcard-back">
+                         <h2>Función</h2>
+                        <p>Selecciona elementos del Stream que cumplen una condición dada por un <code>Predicate</code>. Ej: <code>stream.filter(n -> n > 10)</code></p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 12: map() -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>map()</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Función</h2>
+                        <p>Transforma cada elemento del Stream aplicando una <code>Function</code>. Ej: <code>stream.map(String::toUpperCase)</code></p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 13: forEach() -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                         <h2>forEach()</h2>
+                    </div>
+                    <div class="flashcard-back">
+                         <h2>Función</h2>
+                        <p>Realiza una acción (definida por un <code>Consumer</code>) para cada elemento del Stream. Ej: <code>stream.forEach(System.out::println)</code></p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 14: collect() -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>collect()</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Función</h2>
+                        <p>Acumula los elementos del Stream en una estructura de datos (<code>List</code>, <code>Set</code>, <code>Map</code>) o un resumen. Usa la clase <code>Collectors</code>. Ej: <code>stream.collect(Collectors.toList())</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fin de las tarjetas de Streams -->
+
+        </div> <!-- Fin .flashcard-grid -->
+
+        <div class="back-link">
+            <br>
+            <a href="streams.html">← Volver a Stream</a>
+        </div>
+
+        <footer>
+            <p>Flashcards Interactivas - <a href="#">Alicia</a></p> <!-- Puedes mantener o cambiar esto -->
+        </footer>
+
+    </div> <!-- Fin .container -->
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado: Java Streams</title>
+    <link rel="stylesheet" href="style.css"> <!-- Asegúrate de que tu style.css esté enlazado -->
+</head>
+<body>
+
+    <div class="container">
+        <div class="back-link">
+            <a href="home.html">← Volver al Menú Principal</a>
+        </div>
+
+        <h1>Ahorcado: Tema Java Streams</h1>
+
+        <div id="game-area">
+            <div id="hangman-status">
+                Intentos restantes: <span id="guesses-left">6</span>
+            </div>
+
+            <div id="word-display">
+                <!-- Las letras ocultas aparecerán aquí -->
+            </div>
+
+            <div id="hint-area"> <!-- NUEVA ÁREA PARA LA PISTA -->
+                <button id="hint-button">Pedir Pista (cuesta 1 intento)</button>
+                <p id="hint-text" style="display: none;"></p> <!-- Párrafo para mostrar la pista -->
+            </div>
+
+            <div id="wrong-guesses">
+                Letras incorrectas: <span id="wrong-letters"></span>
+            </div>
+
+            <div id="letter-buttons">
+                <!-- Los botones del alfabeto se generarán aquí -->
+            </div>
+
+            <div id="message-area">
+                <!-- Mensajes de ganar/perder -->
+            </div>
+
+            <button id="restart-button" style="display: none;">Jugar de Nuevo</button>
+        </div>
+
+        <div class="back-link">
+            <br>
+            <a href="streams.html">← Volver a Stream</a> <!-- Asegúrate que este enlace es correcto -->
+        </div>
+    </div>
+
+    <script src="ahorcadoStream.js"></script>
+</body>
+</html>

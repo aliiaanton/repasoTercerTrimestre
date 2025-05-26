@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para responsividad básica -->
+    <title>Flashcards JDBC</title> <!-- Título actualizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Flashcards JDBC</h1> <!-- Título actualizado -->
+        <p style="text-align: center;">Haz clic en una tarjeta para ver la definición.</p>
+
+        <div class="flashcard-grid">
+
+            <!-- Flashcard 1: API JDBC -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>API JDBC</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>¿Qué es JDBC?</h2>
+                        <p><strong>J</strong>ava <strong>D</strong>ata<strong>B</strong>ase <strong>C</strong>onnectivity. Es una <strong>API</strong> estándar de Java para conectar y ejecutar consultas con bases de datos.</p>
+                        <p>Proporciona interfaces (<code>Connection</code>, <code>Statement</code>, <code>ResultSet</code>...).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 2: Driver JDBC -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Driver JDBC</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Función</h2>
+                        <p>Implementación específica del fabricante de la BD (MySQL, Oracle, etc.) de las interfaces JDBC. <strong>Traduce</strong> las llamadas JDBC a comandos nativos de la BD.</p>
+                        <p>Se carga (a menudo automáticamente) antes de usar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 3: Conexión (Connection) -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Conexión (Connection)</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>¿Qué representa?</h2>
+                        <p>Representa una <strong>sesión</strong> con la base de datos. Se obtiene usando <code>DriverManager.getConnection(url, user, password)</code>.</p>
+                         <p>A través de ella se crean los <code>Statement</code>s.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 4: Ejecución de Sentencias -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Ejecución de Sentencias</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Objetos Principales</h2>
+                        <p>Se usan objetos <code>Statement</code> o <code>PreparedStatement</code> (creados desde <code>Connection</code>) para enviar instrucciones SQL a la BD.</p>
+                        <p>Métodos: <code>executeQuery()</code> (para SELECT), <code>executeUpdate()</code> (para INSERT, UPDATE, DELETE).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 5: Statement -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Statement</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Uso Básico</h2>
+                        <p>Interfaz para ejecutar sentencias SQL <strong>estáticas</strong> (sin parámetros). La SQL se pasa directamente a los métodos <code>execute...()</code>.</p>
+                        <p><strong>Vulnerable</strong> a SQL Injection si se concatena entrada de usuario.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 6: ResultSet -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>ResultSet</h2>
+                    </div>
+                    <div class="flashcard-back">
+                         <h2>¿Qué contiene?</h2>
+                        <p>Representa el conjunto de resultados de una consulta (<code>executeQuery()</code>). Es una tabla de datos con un <strong>cursor</strong>.</p>
+                         <p>Se itera con <code>while(rs.next())</code>. Se accede a datos con <code>rs.getString("columna")</code>, <code>rs.getInt(indice)</code>, etc.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 7: SQL Injection -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>SQL Injection</h2>
+                    </div>
+                    <div class="flashcard-back">
+                         <h2>¿Qué es y Peligro?</h2>
+                         <p>Ataque que inserta código SQL malicioso en consultas, a través de la entrada del usuario.</p>
+                         <p><strong>Peligro:</strong> Puede leer, modificar o borrar datos, obtener control del servidor.</p>
+                          <p><strong>Prevención:</strong> Usar <code>PreparedStatement</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 8: Sentencias Parametrizadas -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Sentencias Parametrizadas</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>PreparedStatement</h2>
+                        <p>Interfaz para ejecutar sentencias SQL <strong>precompiladas</strong> con parámetros (<code>?</code>).</p>
+                         <p>Los valores se asignan con métodos <code>setTipo(indice, valor)</code> (ej: <code>setString(1, "valor")</code>).</p>
+                         <p><strong>Beneficios:</strong> Mejor rendimiento y <strong>previene SQL Injection</strong>.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 9: Operaciones CRUD -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Operaciones CRUD</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>¿Qué significa?</h2>
+                        <p>Acrónimo de las operaciones básicas en BBDD:</p>
+                        <ul>
+                            <li><strong>C</strong>reate (Crear - <code>INSERT</code>)</li>
+                            <li><strong>R</strong>ead (Leer - <code>SELECT</code>)</li>
+                            <li><strong>U</strong>pdate (Actualizar - <code>UPDATE</code>)</li>
+                            <li><strong>D</strong>elete (Borrar - <code>DELETE</code>)</li>
+                         </ul>
+                         <p>Se ejecutan con <code>executeQuery()</code> o <code>executeUpdate()</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 10: DAO (Objeto de Acceso a Datos) -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>DAO (Objeto Acceso Datos)</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Patrón de Diseño</h2>
+                        <p>Abstrae y encapsula el acceso a la fuente de datos (la lógica JDBC).</p>
+                        <p>Proporciona una interfaz clara (ej: <code>guardarCliente()</code>, <code>buscarClientePorId()</code>) ocultando los detalles SQL y JDBC.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 11: Mapeo Objeto-Relacional (Básico) -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Mapeo Objeto-Relacional</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Concepto Básico (ORM)</h2>
+                        <p>Técnica para convertir datos entre el modelo de objetos (clases Java) y el modelo relacional (tablas de BD).</p>
+                        <p>Ej: Una clase <code>Cliente</code> se mapea a una tabla <code>clientes</code>, sus atributos a columnas.</p>
+                        <p>(Frameworks como Hibernate/JPA lo automatizan).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fin de las tarjetas JDBC -->
+
+        </div> <!-- Fin .flashcard-grid -->
+
+        <div class="back-link">
+            <br>
+            <a href="bbdd.html">← Volver a BBDD</a>
+        </div>
+
+        <footer>
+            <p>Flashcards Interactivas - <a href="#">Alicia</a></p> <!-- Puedes mantener o cambiar esto -->
+        </footer>
+
+    </div> <!-- Fin .container -->
+
+</body>
+</html>

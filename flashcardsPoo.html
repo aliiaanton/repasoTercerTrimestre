@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para responsividad básica -->
+    <title>Flashcards POO y UML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="back-link">
+            <a href="home.html">← Volver al Menú Principal</a>
+        </div>
+
+        <h1>Flashcards POO y UML</h1>
+        <p style="text-align: center;">Haz clic en una tarjeta para ver la definición.</p>
+
+        <div class="flashcard-grid">
+
+            <!-- Flashcard 1: POO -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>POO</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Paradigma de programación basado en clases y objetos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 2: UML -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>UML</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Lenguaje de Modelado Unificado, estándar para visualizar, especificar y documentar sistemas software.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 3: Clase -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Clase</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Plantilla para crear objetos, define atributos y métodos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 4: Objeto -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Objeto</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Instancia de una clase, tiene estado (atributos) y comportamiento (métodos).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 5: Encapsulación -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Encapsulación</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Ocultar el estado interno de un objeto y requerir que toda interacción se realice a través de métodos. (Usar modificadores de acceso y getters/setters).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 6: Abstracción -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Abstracción</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Exponer solo las características esenciales de un objeto, ocultando los detalles de implementación.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 7: Herencia -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Herencia</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Mecanismo por el cual una clase (derivada) adquiere atributos y métodos de otra clase (base). Relación "es-un-tipo-de".</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 8: Polimorfismo -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Polimorfismo</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Capacidad de objetos de diferentes clases para responder al mismo mensaje (método) de diferentes maneras.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 9: Constructor -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Constructor</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Método especial para inicializar un objeto cuando se crea. Mismo nombre que la clase, sin tipo de retorno.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 10: Getter -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Getter</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Método público para obtener el valor de un atributo privado. (Ej: getDimensiones()).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 11: Setter -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Setter</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Método público para establecer el valor de un atributo privado. (Ej: setDimensiones(int d)).</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 12: Visibilidad Pública (+) -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <span class="symbol">+</span>
+                        <h2>Vis. Pública</h2> <!-- Abreviado para espacio -->
+                    </div>
+                    <div class="flashcard-back">
+                        <span class="symbol">+</span>
+                        <p>Indica que el miembro (atributo/método) es accesible desde cualquier clase.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 13: Visibilidad Privada (-) -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <span class="symbol">-</span>
+                         <h2>Vis. Privada</h2> <!-- Abreviado -->
+                    </div>
+                    <div class="flashcard-back">
+                        <span class="symbol">-</span>
+                        <p>Indica que el miembro solo es accesible desde dentro de la misma clase.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 14: Visibilidad Protegida (#) -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                         <span class="symbol">#</span>
+                         <h2>Vis. Protegida</h2> <!-- Abreviado -->
+                    </div>
+                    <div class="flashcard-back">
+                         <span class="symbol">#</span>
+                        <p>Indica que el miembro es accesible desde la misma clase, subclases y clases del mismo paquete.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 15: Visibilidad Paquete (~) -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <span class="symbol">~</span>
+                        <h2>Vis. Paquete</h2> <!-- Abreviado -->
+                    </div>
+                    <div class="flashcard-back">
+                         <span class="symbol">~</span>
+                        <p>Indica que el miembro es accesible solo desde clases dentro del mismo paquete (visibilidad por defecto en Java si no se especifica).</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 16: static -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>static</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Modificador para miembros que pertenecen a la clase, no a las instancias. Se accede usando NombreClase.miembro.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 17: final (variable) -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>final (var)</h2> <!-- Abreviado -->
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Indica que el valor de la variable no puede cambiar una vez inicializado (constante).</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 18: abstract (método) -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>abstract (mét.)</h2> <!-- Abreviado -->
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Método sin implementación, debe ser implementado por subclases no abstractas.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 19: abstract (clase) -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>abstract (clase)</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Clase que no puede ser instanciada, puede contener métodos abstractos.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 20: Interface -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Interface</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Contrato que define métodos (y constantes). Una clase `implementa` una interfaz.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 21: Generalización -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Generalización</h2>
+                        <p>(Flecha sólida)</p> <!-- Simplificado -->
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Relación UML de Herencia. Indica que la clase hija (origen flecha) "es-un-tipo-de" la clase padre (destino flecha).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 22: Realización -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Realización</h2>
+                        <p>(Flecha discontinua)</p> <!-- Simplificado -->
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Relación UML de Implementación de interfaz. Indica que la clase (origen) cumple el contrato definido por la interfaz (destino).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 23: Asociación -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Asociación</h2>
+                         <p>(Línea sólida)</p>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Relación estructural general entre clases. Indica que los objetos están conectados o se conocen. Puede tener multiplicidad y navegabilidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 24: Agregación -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Agregación</h2>
+                        <p>(Rombo hueco)</p> <!-- Simplificado -->
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Tipo de asociación "tiene-un" o "parte-de". El ciclo de vida de la parte es independiente del todo (el rombo va en el lado del "todo").</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 25: Composición -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Composición</h2>
+                         <p>(Rombo relleno)</p> <!-- Simplificado -->
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Agregación fuerte "parte-de". El ciclo de vida de la parte depende del todo (la parte no existe sin el todo). El rombo va en el lado del "todo".</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 26: Dependencia -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Dependencia</h2>
+                        <p>(Flecha discontinua)</p>
+                    </div>
+                    <div class="flashcard-back">
+                        <p>Relación de uso. Una clase (origen) utiliza a otra (destino), p.ej., como parámetro de un método o variable local. Un cambio en el destino puede afectar al origen.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fin de las tarjetas -->
+
+        </div> <!-- Fin .flashcard-grid -->
+
+        <div class="back-link">
+            <br>
+            <a href="poo.html">← Volver a POO y UML</a>
+        </div>
+
+        <footer>
+            <p>Flashcards Interactivas - <a href="#">Alicia</a></p>
+        </footer>
+
+    </div> <!-- Fin .container -->
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO Storyteller: Diseña el Escenario</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tu hoja de estilos principal -->
+</head>
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="home.html">← Volver al Menú Principal</a>
+        </div>
+
+        <h1>POO Storyteller: Diseñador de Escenarios</h1>
+
+        <div id="scenario-display">
+            <h2>Escenario Actual:</h2>
+            <p id="scenario-text">Cargando escenario...</p>
+        </div>
+
+        <div id="player-input-area">
+            <h3>Tu Diseño:</h3>
+            <div id="identified-classes-area">
+                <label for="class-name-input">Identifica una clase principal:</label>
+                <input type="text" id="class-name-input" placeholder="Nombre de la Clase">
+                <button id="add-class-button">Añadir Clase</button>
+                <div id="classes-list">
+                    <!-- Las clases añadidas por el jugador aparecerán aquí -->
+                </div>
+            </div>
+        </div>
+
+        <div id="solution-area" style="display: none;">
+            <h3>Solución Sugerida / Puntos Clave:</h3>
+            <div id="suggested-solution-text">
+                <!-- La solución o puntos clave del escenario actual se mostrarán aquí -->
+            </div>
+        </div>
+
+        <div id="controls">
+            <button id="show-solution-button">Ver Solución / Puntos Clave</button>
+            <button id="next-scenario-button">Siguiente Escenario</button>
+        </div>
+        <br>
+         <div class="back-link">
+            <a href="poo.html">← Volver a POO y UML</a>
+        </div>
+    </div>
+
+    <script src="storytellerPoo.js"></script>
+</body>
+</html>

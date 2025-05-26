@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Colecciones Java</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="back-link">
+            <a href="home.html">← Volver al Menú Principal</a>
+        </div>
+
+        <h1>Test de Repaso: Colecciones Java</h1>
+
+        <form id="quizForm">
+
+            <div class="quiz-question">
+                <p>1. <code>Collection</code> es:</p>
+                <label><input type="radio" name="q1" value="a"> Una interfaz</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q1" value="b"> Una clase</label><br>
+                <label><input type="radio" name="q1" value="c"> Un objeto</label><br>
+                <label><input type="radio" name="q1" value="d"> Un método</label><br>
+                <span class="respuesta-feedback" id="feedback-q1">Respuesta correcta: <strong>a) Una interfaz</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>2. En el marco de trabajo Collection, una <code>List</code> es:</p>
+                <label><input type="radio" name="q2" value="a"> Un fichero de texto</label><br>
+                <label><input type="radio" name="q2" value="b"> Una tabla</label><br>
+                <label><input type="radio" name="q2" value="c"> Una colección cuya clase implementa la interfaz <code>List</code></label><br> <!-- Correcta -->
+                <label><input type="radio" name="q2" value="d"> Un tipo primitivo de datos</label><br>
+                <span class="respuesta-feedback" id="feedback-q2">Respuesta correcta: <strong>c) Una colección cuya clase implementa la interfaz <code>List</code></strong></span>
+            </div>
+
+             <div class="quiz-question">
+                <p>3. ¿Qué tipos permiten definir clases, interfaces y métodos capaces de funcionar con diversos tipos de datos?</p>
+                <label><input type="radio" name="q3" value="a"> diversos</label><br>
+                <label><input type="radio" name="q3" value="b"> indefinidos</label><br>
+                <label><input type="radio" name="q3" value="c"> genéricos</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q3" value="d"> indeterminados</label><br>
+                <span class="respuesta-feedback" id="feedback-q3">Respuesta correcta: <strong>c) genéricos</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>4. <code>Collections</code> (con 's' final) es:</p>
+                <label><input type="radio" name="q4" value="a"> Una interfaz</label><br>
+                <label><input type="radio" name="q4" value="b"> Un paquete de utilidades</label><br>
+                <label><input type="radio" name="q4" value="c"> Una variable</label><br>
+                <label><input type="radio" name="q4" value="d"> Una clase con utilidades para el marco <code>Collection</code></label><br> <!-- Correcta -->
+                <span class="respuesta-feedback" id="feedback-q4">Respuesta correcta: <strong>d) Una clase con utilidades para el marco <code>Collection</code></strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>5. ¿Cuál de las siguientes es una implementación de <code>List</code> en la API de Java?</p>
+                <label><input type="radio" name="q5" value="a"> HashSet</label><br>
+                <label><input type="radio" name="q5" value="b"> ArrayList</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q5" value="c"> TreeMap</label><br>
+                <label><input type="radio" name="q5" value="d"> TreeSet</label><br>
+                <span class="respuesta-feedback" id="feedback-q5">Respuesta correcta: <strong>b) ArrayList</strong> (LinkedList también lo es)</span>
+            </div>
+
+            <div class="quiz-question">
+                <p>6. ¿Qué método se usa comúnmente para insertar un nuevo elemento en una colección?</p>
+                <label><input type="radio" name="q6" value="a"> insert()</label><br>
+                <label><input type="radio" name="q6" value="b"> put()</label><br>
+                <label><input type="radio" name="q6" value="c"> add()</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q6" value="d"> append()</label><br>
+                <span class="respuesta-feedback" id="feedback-q6">Respuesta correcta: <strong>c) add()</strong></span>
+            </div>
+
+             <div class="quiz-question">
+                <p>7. <code>Iterator</code> es:</p>
+                <label><input type="radio" name="q7" value="a"> Una clase</label><br>
+                <label><input type="radio" name="q7" value="b"> Una interfaz</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q7" value="c"> Una variable</label><br>
+                <label><input type="radio" name="q7" value="d"> Un método</label><br>
+                <span class="respuesta-feedback" id="feedback-q7">Respuesta correcta: <strong>b) Una interfaz</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>8. Los iteradores se usan principalmente para:</p>
+                <label><input type="radio" name="q8" value="a"> Insertar elementos en una colección</label><br>
+                <label><input type="radio" name="q8" value="b"> Recorrer tablas</label><br>
+                <label><input type="radio" name="q8" value="c"> Recorrer colecciones</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q8" value="d"> Recorrer cadenas</label><br>
+                <span class="respuesta-feedback" id="feedback-q8">Respuesta correcta: <strong>c) Recorrer colecciones</strong></span>
+            </div>
+
+             <div class="quiz-question">
+                <p>9. La estructura Pila (Stack) se caracteriza porque:</p>
+                <label><input type="radio" name="q9" value="a"> Sus elementos están ordenados</label><br>
+                <label><input type="radio" name="q9" value="b"> El primer elemento que entra es el último en salir (LIFO)</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q9" value="c"> No admite elementos repetidos</label><br>
+                <label><input type="radio" name="q9" value="d"> El primer elemento que entra es el primero en salir (FIFO)</label><br>
+                <span class="respuesta-feedback" id="feedback-q9">Respuesta correcta: <strong>b) El primer elemento que entra es el último en salir (LIFO)</strong></span>
+            </div>
+
+             <div class="quiz-question">
+                <p>10. ¿Cuál de las siguientes es una implementación de <code>Set</code> en la API de Java?</p>
+                <label><input type="radio" name="q10" value="a"> ArrayList</label><br>
+                <label><input type="radio" name="q10" value="b"> LinkedList</label><br>
+                <label><input type="radio" name="q10" value="c"> HashSet</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q10" value="d"> HashMap</label><br>
+                <span class="respuesta-feedback" id="feedback-q10">Respuesta correcta: <strong>c) HashSet</strong> (TreeSet y LinkedHashSet también lo son)</span>
+            </div>
+
+            <div class="quiz-question">
+                <p>11. En Java, <code>Map</code> es:</p>
+                <label><input type="radio" name="q11" value="a"> Una interfaz</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q11" value="b"> Una clase</label><br>
+                <label><input type="radio" name="q11" value="c"> Una variable</label><br>
+                <label><input type="radio" name="q11" value="d"> Un método</label><br>
+                <span class="respuesta-feedback" id="feedback-q11">Respuesta correcta: <strong>a) Una interfaz</strong></span>
+            </div>
+
+             <div class="quiz-question">
+                <p>12. En un <code>TreeMap</code>, las entradas se van añadiendo por orden:</p>
+                <label><input type="radio" name="q12" value="a"> natural de los valores</label><br>
+                <label><input type="radio" name="q12" value="b"> de inserción</label><br>
+                <label><input type="radio" name="q12" value="c"> natural de las claves</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q12" value="d"> aleatorio</label><br>
+                <span class="respuesta-feedback" id="feedback-q12">Respuesta correcta: <strong>c) natural de las claves</strong> (o según un Comparator)</span>
+            </div>
+
+
+            <button type="button" onclick="mostrarResultados()">Ver Respuestas</button>
+            <!-- Botón secundario para ocultar -->
+            <button type="button" class="secondary" onclick="ocultarResultados()">Ocultar Respuestas</button>
+
+        </form>
+
+        <!-- Enlace opcional para volver a una página principal del tema -->
+        <div class="back-link">
+            <br>
+            <a href="colecciones.html">← Volver a Colecciones</a>
+        </div>
+
+        <footer>
+             <p>Material de estudio interactivo - <a href="#">Alicia</a></p>
+        </footer>
+
+    </div>
+
+    <script>
+        function mostrarResultados() {
+            // Mostramos todos los feedbacks
+            const feedbacks = document.querySelectorAll('.respuesta-feedback');
+            feedbacks.forEach(span => {
+                span.style.display = 'block'; // Mostrar como bloque para que ocupe su línea
+            });
+
+            // Opcional: Deshabilitar el botón después de usarlo
+             const mostrarBtn = document.querySelector('button[onclick="mostrarResultados()"]');
+             if(mostrarBtn) mostrarBtn.disabled = true;
+
+             // Opcional: Habilitar el botón de ocultar
+             const ocultarBtn = document.querySelector('button[onclick="ocultarResultados()"]');
+             if(ocultarBtn) ocultarBtn.disabled = false;
+        }
+
+
+        function ocultarResultados() {
+            const feedbacks = document.querySelectorAll('.respuesta-feedback');
+            feedbacks.forEach(span => {
+                span.style.display = 'none';
+            });
+            // Habilitar el botón de mostrar de nuevo
+            const mostrarBtn = document.querySelector('button[onclick="mostrarResultados()"]');
+            if(mostrarBtn) mostrarBtn.disabled = false;
+
+             // Opcional: Deshabilitar el botón de ocultar después de usarlo
+             const ocultarBtn = document.querySelector('button[onclick="ocultarResultados()"]');
+             if(ocultarBtn) ocultarBtn.disabled = true;
+        }
+
+        // Opcional: Ocultar respuestas al cargar la página y deshabilitar el botón de ocultar inicialmente
+        document.addEventListener('DOMContentLoaded', (event) => {
+            ocultarResultados(); // Asegura que estén ocultas al inicio
+            const ocultarBtn = document.querySelector('button[onclick="ocultarResultados()"]');
+            if(ocultarBtn) ocultarBtn.disabled = true; // Deshabilitar Ocultar inicialmente
+        });
+    </script>
+
+</body>
+</html>

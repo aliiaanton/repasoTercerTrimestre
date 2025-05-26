@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para responsividad básica -->
+    <title>Flashcards Colecciones Java</title> <!-- Título actualizado -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="back-link">
+            <a href="home.html">← Volver al Menú Principal</a>
+        </div>
+
+        <h1>Flashcards Colecciones</h1> <!-- Título actualizado -->
+        <p style="text-align: center;">Haz clic en una tarjeta para ver la definición.</p>
+
+        <div class="flashcard-grid">
+
+            <!-- Flashcard 1: Tipos Genéricos -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Tipos Genéricos (Generics)</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>¿Qué son y para qué sirven?</h2>
+                        <p>Mecanismo para parametrizar tipos (<code><T></code>). En colecciones: especifican el tipo de contenido, dan <strong>seguridad en compilación</strong> y evitan casting.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 2: Interfaz Collection -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Interfaz Collection</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>¿Qué es?</h2>
+                        <p>Interfaz raíz (excepto Maps). Representa un grupo de objetos. Métodos básicos: <code>add()</code>, <code>remove()</code>, <code>size()</code>, <code>contains()</code>, <code>iterator()</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 3: Interfaz List -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Interfaz List</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Características</h2>
+                        <p>Subinterfaz de Collection. Secuencia <strong>ordenada</strong> (mantiene orden inserción). Permite elementos <strong>duplicados</strong>. Acceso por <strong>índice</strong> (<code>get(index)</code>).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 4: ArrayList -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>ArrayList</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Descripción</h2>
+                        <p>Implementación de List (array dinámico). <strong>Rápido</strong> para acceso aleatorio (get/set). <strong>Lento</strong> para inserciones/eliminaciones en medio.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 5: LinkedList -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>LinkedList</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Descripción</h2>
+                        <p>Implementación de List (lista doblemente enlazada). <strong>Rápido</strong> para inserciones/eliminaciones (extremos). <strong>Lento</strong> para acceso aleatorio. Implementa <code>Deque</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 6: Interfaz Set -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Interfaz Set</h2>
+                    </div>
+                    <div class="flashcard-back">
+                         <h2>Característica Principal</h2>
+                        <p>Subinterfaz de Collection. Colección que <strong>NO</strong> permite elementos <strong>duplicados</strong>.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 7: HashSet -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>HashSet</h2>
+                    </div>
+                    <div class="flashcard-back">
+                         <h2>Descripción</h2>
+                         <p>Implementación de Set (tabla hash). <strong>No garantiza orden</strong>. Más <strong>rápida</strong> (O(1) promedio). Permite un <code>null</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 8: TreeSet -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>TreeSet</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Descripción</h2>
+                        <p>Implementación de Set (árbol). Elementos <strong>ordenados</strong> (natural o Comparator). O(log n). No permite <code>null</code>s (por defecto).</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 9: LinkedHashSet -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>LinkedHashSet</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Descripción</h2>
+                        <p>Implementación de Set (hash + lista enlazada). Mantiene <strong>orden de inserción</strong>. Casi tan rápida como HashSet. Permite un <code>null</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 10: Conversiones List/Set -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Conversiones List ↔ Set</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>¿Cómo?</h2>
+                        <p>Usando el constructor: <code>new HashSet<>(list)</code> para eliminar duplicados. <code>new ArrayList<>(set)</code> para obtener una lista.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 11: Interfaz Map -->
+            <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Interfaz Map</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>¿Qué es?</h2>
+                        <p>Colección de pares <strong>clave-valor</strong>. Claves <strong>únicas</strong>. <strong>NO</strong> extiende <code>Collection</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 12: HashMap -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>HashMap</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Descripción</h2>
+                        <p>Implementación de Map (tabla hash). <strong>No garantiza orden</strong>. Más <strong>rápida</strong> (O(1) promedio). Permite clave <code>null</code> y valores <code>null</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 13: TreeMap -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>TreeMap</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>Descripción</h2>
+                        <p>Implementación de Map (árbol). Claves <strong>ordenadas</strong> (natural o Comparator). O(log n). No permite claves <code>null</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 14: LinkedHashMap -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                         <h2>LinkedHashMap</h2>
+                    </div>
+                    <div class="flashcard-back">
+                         <h2>Descripción</h2>
+                        <p>Implementación de Map (hash + lista enlazada). Mantiene <strong>orden de inserción</strong> (o acceso). Casi tan rápida como HashMap. Permite clave <code>null</code>.</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 15: Vistas de Map -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Vistas Collection de Map</h2>
+                    </div>
+                    <div class="flashcard-back">
+                         <h2>¿Cuáles son?</h2>
+                        <p>Colecciones respaldadas por el Map: <code>keySet()</code> (Set de claves), <code>values()</code> (Collection de valores), <code>entrySet()</code> (Set de Map.Entry).</p>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Flashcard 16: Clase Collections -->
+             <div class="flashcard" onclick="this.classList.toggle('is-flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h2>Clase Collections</h2>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2>¿Qué es?</h2>
+                        <p>Clase de utilidad (<em>utility class</em>) con métodos <strong>estáticos</strong> para operar sobre colecciones (<code>sort</code>, <code>shuffle</code>, <code>reverse</code>, <code>max</code>, etc.).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fin de las tarjetas de Colecciones -->
+
+        </div> <!-- Fin .flashcard-grid -->
+
+        <div class="back-link">
+            <br>
+            <a href="colecciones.html">← Volver a Colecciones</a>
+        </div>
+
+        <footer>
+            <p>Flashcards Interactivas - <a href="#">Alicia</a></p> <!-- Puedes mantener o cambiar esto -->
+        </footer>
+
+    </div> <!-- Fin .container -->
+
+</body>
+</html>

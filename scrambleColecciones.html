@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Scramble: Colecciones Java</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="back-link">
+            <a href="home.html">← Volver al Menú Principal</a>
+        </div>
+
+        <h1>Word Scramble: Colecciones Java</h1>
+
+        <div id="game-area">
+            <p>Descifra la siguiente palabra:</p>
+            <div id="scrambled-word">Cargando...</div>
+
+            <input type="text" id="guess-input" placeholder="Escribe tu respuesta aquí">
+            <button id="submit-guess">Comprobar</button>
+
+            <p id="feedback"></p>
+            <p>Puntuación: <span id="score">0</span></p>
+
+            <button id="next-word" style="display: none;">Siguiente Palabra</button>
+        </div>
+
+        <div id="game-over" style="display: none;">
+            <h2>¡Juego Terminado!</h2>
+            <p>Tu puntuación final es: <span id="final-score">0</span></p>
+            <button id="restart-game">Jugar de Nuevo</button>
+        </div>
+
+        <div class="back-link">
+            <br>
+            <a href="colecciones.html">← Volver a Colecciones</a>
+        </div>
+
+    </div>
+
+    <script src="scrambleColecciones.js"></script>
+</body>
+</html>

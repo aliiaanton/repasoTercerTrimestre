@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Java Streams</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="back-link">
+            <a href="home.html">← Volver al Menú Principal</a>
+        </div>
+
+        <h1>Test de Repaso: Java Streams</h1>
+
+        <form id="quizForm">
+
+            <div class="quiz-question">
+                <p>1. Una interfaz funcional es:</p>
+                <label><input type="radio" name="q1" value="a"> Una interfaz que funciona</label><br>
+                <label><input type="radio" name="q1" value="b"> Una interfaz útil</label><br>
+                <label><input type="radio" name="q1" value="c"> Una clase</label><br>
+                <label><input type="radio" name="q1" value="d"> Una interfaz con único método abstracto</label><br> <!-- Correcta -->
+                <span class="respuesta-feedback" id="feedback-q1">Respuesta correcta: <strong>d) Una interfaz con único método abstracto</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>2. Una expresión lambda es:</p>
+                <label><input type="radio" name="q2" value="a"> Una expresión matemática</label><br>
+                <label><input type="radio" name="q2" value="b"> Cualquier trozo de código sencillo</label><br>
+                <label><input type="radio" name="q2" value="c"> Una forma especial de escribir sentencias donde se usan interfaces funcionales</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q2" value="d"> Una interfaz</label><br>
+                <span class="respuesta-feedback" id="feedback-q2">Respuesta correcta: <strong>c) Una forma especial de escribir sentencias donde se usan interfaces funcionales</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>3. <code>Stream</code> es:</p>
+                <label><input type="radio" name="q3" value="a"> Una interfaz</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q3" value="b"> Una clase</label><br>
+                <label><input type="radio" name="q3" value="c"> Un conjunto de datos</label><br>
+                <label><input type="radio" name="q3" value="d"> Un método</label><br>
+                <span class="respuesta-feedback" id="feedback-q3">Respuesta correcta: <strong>a) Una interfaz</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>4. En una expresión lambda son obligatorios:</p>
+                <label><input type="radio" name="q4" value="a"> Una estructura switch</label><br>
+                <label><input type="radio" name="q4" value="b"> Una flecha (<code>-></code>)</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q4" value="c"> Un bucle</label><br>
+                <label><input type="radio" name="q4" value="d"> Siempre una lista de parámetros y una sentencia</label><br>
+                <span class="respuesta-feedback" id="feedback-q4">Respuesta correcta: <strong>b) Una flecha (<code>-></code>)</strong> (Los parámetros y el cuerpo/sentencia también son esenciales, pero la flecha es el operador distintivo)</span>
+            </div>
+
+            <div class="quiz-question">
+                <p>5. <code>Predicate<T></code>, definida en la API, es:</p>
+                <label><input type="radio" name="q5" value="a"> Una expresión lambda</label><br>
+                <label><input type="radio" name="q5" value="b"> Una clase</label><br>
+                <label><input type="radio" name="q5" value="c"> Una interfaz funcional</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q5" value="d"> Un método abstracto</label><br>
+                <span class="respuesta-feedback" id="feedback-q5">Respuesta correcta: <strong>c) Una interfaz funcional</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>6. ¿Qué método de <code>Predicate<T></code> es abstracto?</p>
+                <label><input type="radio" name="q6" value="a"> and()</label><br>
+                <label><input type="radio" name="q6" value="b"> or()</label><br>
+                <label><input type="radio" name="q6" value="c"> negate()</label><br>
+                <label><input type="radio" name="q6" value="d"> test()</label><br> <!-- Correcta -->
+                <span class="respuesta-feedback" id="feedback-q6">Respuesta correcta: <strong>d) test()</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>7. El código <code>predicado1.or(predicado2).test()</code> devuelve <code>true</code> si:</p>
+                <label><input type="radio" name="q7" value="a"> <code>predicado1.test()</code> y <code>predicado2.test()</code> devuelven <code>true</code></label><br>
+                <label><input type="radio" name="q7" value="b"> <code>predicado1.test()</code> devuelve <code>true</code> y <code>predicado2.test()</code> devuelve <code>false</code></label><br>
+                <label><input type="radio" name="q7" value="c"> <code>predicado1.test()</code>, <code>predicado2.test()</code> o ambos devuelven <code>true</code></label><br> <!-- Correcta -->
+                <label><input type="radio" name="q7" value="d"> Solo si ambos devuelven <code>false</code></label><br>
+                <span class="respuesta-feedback" id="feedback-q7">Respuesta correcta: <strong>c) <code>predicado1.test()</code>, <code>predicado2.test()</code> o ambos devuelven <code>true</code></strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>8. ¿Cuál es el método abstracto de la interfaz funcional <code>Function<T, V></code>?</p>
+                <label><input type="radio" name="q8" value="a"> test(T t)</label><br>
+                <label><input type="radio" name="q8" value="b"> accept(T t)</label><br>
+                <label><input type="radio" name="q8" value="c"> apply(T t)</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q8" value="d"> get()</label><br>
+                <span class="respuesta-feedback" id="feedback-q8">Respuesta correcta: <strong>c) apply(T t)</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>9. ¿Cómo escribiríamos la referencia al método estático <code>miMetodo()</code> definido en la clase <code>MiClase</code>?</p>
+                <label><input type="radio" name="q9" value="a"> MiClase::miMetodo</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q9" value="b"> MiClase::miMetodo()</label><br>
+                <label><input type="radio" name="q9" value="c"> MiClase:miMetodo()</label><br>
+                <label><input type="radio" name="q9" value="d"> miClase.miMetodo</label><br>
+                <span class="respuesta-feedback" id="feedback-q9">Respuesta correcta: <strong>a) MiClase::miMetodo</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>10. ¿Cómo se llaman las operaciones sobre objetos Stream que dan como resultado otro Stream?</p>
+                <label><input type="radio" name="q10" value="a"> Operaciones finales</label><br>
+                <label><input type="radio" name="q10" value="b"> Operaciones terminales</label><br>
+                <label><input type="radio" name="q10" value="c"> Operaciones intermedias</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q10" value="d"> Operaciones lambda</label><br>
+                <span class="respuesta-feedback" id="feedback-q10">Respuesta correcta: <strong>c) Operaciones intermedias</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>11. ¿Qué método sirve para transformar un Stream devolviendo otro donde se han seleccionado los elementos que cumplen una determinada condición?</p>
+                <label><input type="radio" name="q11" value="a"> map(Function)</label><br>
+                <label><input type="radio" name="q11" value="b"> reduce(BinaryOperator)</label><br>
+                <label><input type="radio" name="q11" value="c"> forEach(Consumer)</label><br>
+                <label><input type="radio" name="q11" value="d"> filter(Predicate)</label><br> <!-- Correcta -->
+                <span class="respuesta-feedback" id="feedback-q11">Respuesta correcta: <strong>d) filter(Predicate)</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>12. ¿Qué error principal hay en este código? <code>miStream.forEach(System.out::println).sorted();</code></p>
+                <label><input type="radio" name="q12" value="a"> Se reutiliza el Stream</label><br>
+                <label><input type="radio" name="q12" value="b"> Se ordenan elementos de un tipo erróneo</label><br>
+                <label><input type="radio" name="q12" value="c"> Se usa una operación terminal (forEach) en un lugar intermedio</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q12" value="d"> No hay ningún error</label><br>
+                <span class="respuesta-feedback" id="feedback-q12">Respuesta correcta: <strong>c) Se usa una operación terminal (forEach) en un lugar intermedio</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                 <p>13. Para usar <code>streamPersonas.sorted()</code>, ¿qué debe cumplir la clase <code>Persona</code>?</p>
+                 <label><input type="radio" name="q13" value="a"> Tener implementado el método <code>toString()</code></label><br>
+                 <label><input type="radio" name="q13" value="b"> Tener implementado el método <code>equals()</code></label><br>
+                 <label><input type="radio" name="q13" value="c"> Tener implementado el método <code>compare()</code></label><br>
+                 <label><input type="radio" name="q13" value="d"> Tener implementada la interfaz <code>Comparable</code> (o pasar un <code>Comparator</code>)</label><br> <!-- Correcta -->
+                 <span class="respuesta-feedback" id="feedback-q13">Respuesta correcta: <strong>d) Tener implementada la interfaz <code>Comparable</code> (o pasar un <code>Comparator</code> a sorted)</strong></span>
+            </div>
+
+
+            <button type="button" onclick="mostrarResultados()">Ver Respuestas</button>
+            <!-- Botón secundario para ocultar -->
+            <button type="button" class="secondary" onclick="ocultarResultados()">Ocultar Respuestas</button>
+
+        </form>
+
+
+        <div class="back-link">
+            <br>
+            <a href="streams.html">← Volver a Streams</a>
+        </div>
+
+        <footer>
+             <p>Material de estudio interactivo - <a href="#">Alicia</a></p>
+        </footer>
+
+    </div>
+
+    <script>
+        function mostrarResultados() {
+            // Mostramos todos los feedbacks
+            const feedbacks = document.querySelectorAll('.respuesta-feedback');
+            feedbacks.forEach(span => {
+                span.style.display = 'block'; // Mostrar como bloque para que ocupe su línea
+            });
+
+            // Opcional: Deshabilitar el botón después de usarlo
+             const mostrarBtn = document.querySelector('button[onclick="mostrarResultados()"]');
+             if(mostrarBtn) mostrarBtn.disabled = true;
+
+             // Opcional: Habilitar el botón de ocultar
+             const ocultarBtn = document.querySelector('button[onclick="ocultarResultados()"]');
+             if(ocultarBtn) ocultarBtn.disabled = false;
+        }
+
+
+        function ocultarResultados() {
+            const feedbacks = document.querySelectorAll('.respuesta-feedback');
+            feedbacks.forEach(span => {
+                span.style.display = 'none';
+            });
+            // Habilitar el botón de mostrar de nuevo
+            const mostrarBtn = document.querySelector('button[onclick="mostrarResultados()"]');
+            if(mostrarBtn) mostrarBtn.disabled = false;
+
+             // Opcional: Deshabilitar el botón de ocultar después de usarlo
+             const ocultarBtn = document.querySelector('button[onclick="ocultarResultados()"]');
+             if(ocultarBtn) ocultarBtn.disabled = true;
+        }
+
+        // Opcional: Ocultar respuestas al cargar la página y deshabilitar el botón de ocultar inicialmente
+        document.addEventListener('DOMContentLoaded', (event) => {
+            ocultarResultados(); // Asegura que estén ocultas al inicio
+            const ocultarBtn = document.querySelector('button[onclick="ocultarResultados()"]');
+            if(ocultarBtn) ocultarBtn.disabled = true; // Deshabilitar Ocultar inicialmente
+        });
+    </script>
+
+</body>
+</html>

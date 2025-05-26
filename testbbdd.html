@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Test JDBC</title>
+    <!-- Asumiendo que tienes un style.css similar al de los ejemplos anteriores -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="back-link">
+            <a href="home.html">← Volver al Menú Principal</a>
+        </div>
+
+        <h1>Test de Repaso: JDBC</h1>
+
+        <form id="quizForm">
+
+            <div class="quiz-question">
+                <p>1. Las clases que componen la API de JDBC se encuentran localizadas en el paquete:</p>
+                <label><input type="radio" name="q1" value="a"> java.mysql.api</label><br>
+                <label><input type="radio" name="q1" value="b"> java.util.sql</label><br>
+                <label><input type="radio" name="q1" value="c"> java.sql</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q1" value="d"> java.mysql.jdbc</label><br>
+                <span class="respuesta-feedback" id="feedback-q1">Respuesta correcta: <strong>c) java.sql</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>2. Las siglas URL se corresponden con:</p>
+                <label><input type="radio" name="q2" value="a"> Unificator Remote Locator.</label><br>
+                <label><input type="radio" name="q2" value="b"> Unique Remote Locator.</label><br>
+                <label><input type="radio" name="q2" value="c"> Uniform Resource Locator.</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q2" value="d"> Uniform Remote Locator.</label><br>
+                <span class="respuesta-feedback" id="feedback-q2">Respuesta correcta: <strong>c) Uniform Resource Locator.</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>3. ¿Qué método de la clase <code>Statement</code> se utiliza principalmente para ejecutar sentencias DML (Data Manipulation Language) como INSERT, UPDATE o DELETE?</p>
+                <label><input type="radio" name="q3" value="a"> <code>executeQuery()</code></label><br>
+                <label><input type="radio" name="q3" value="b"> <code>execute()</code></label><br>
+                <label><input type="radio" name="q3" value="c"> <code>executeUpdate()</code></label><br> <!-- Correcta -->
+                <label><input type="radio" name="q3" value="d"> <code>executeBatch()</code></label><br>
+                <span class="respuesta-feedback" id="feedback-q3">Respuesta correcta: <strong>c) <code>executeUpdate()</code></strong> (Devuelve el número de filas afectadas).</span>
+            </div>
+
+            <div class="quiz-question">
+                <p>4. SQL Injection es una técnica utilizada habitualmente para:</p>
+                <label><input type="radio" name="q4" value="a"> Insertar grandes cantidades de datos en la BD.</label><br>
+                <label><input type="radio" name="q4" value="b"> Hackear aplicaciones que utilizan JDBC.</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q4" value="c"> Realizar comprobaciones de integridad en un SGBD.</label><br>
+                <label><input type="radio" name="q4" value="d"> Todas las respuestas son ciertas.</label><br>
+                <span class="respuesta-feedback" id="feedback-q4">Respuesta correcta: <strong>b) Hackear aplicaciones que utilizan JDBC.</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>5. El formato de localizador de recurso que permite crear una conexión con un SGBD MySQL tiene el formato:</p>
+                <label><input type="radio" name="q5" value="a"> <code>jdbc:mysql://<máquina>/<BD></code></label><br> <!-- Correcta -->
+                <label><input type="radio" name="q5" value="b"> <code>jdbc:<máquina>://mysql/<BD></code></label><br>
+                <label><input type="radio" name="q5" value="c"> <code>mysql:jdbc://<máquina>/<BD></code></label><br>
+                <label><input type="radio" name="q5" value="d"> <code>jdbc:<BD>://<máquina>/mysql</code></label><br>
+                <span class="respuesta-feedback" id="feedback-q5">Respuesta correcta: <strong>a) <code>jdbc:mysql://<máquina>/<BD></code></strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>6. Al iterar sobre un <code>ResultSet</code> usando <code>while(rs.next())</code>, ¿cómo accedemos al valor de una columna llamada "nombre" de tipo String?</p>
+                <label><input type="radio" name="q6" value="a"> <code>rs.fetchString("nombre")</code></label><br>
+                <label><input type="radio" name="q6" value="b"> <code>rs.retrieve("nombre")</code></label><br>
+                <label><input type="radio" name="q6" value="c"> <code>rs.getString("nombre")</code></label><br> <!-- Correcta -->
+                <label><input type="radio" name="q6" value="d"> <code>rs.column("nombre").toString()</code></label><br>
+                <span class="respuesta-feedback" id="feedback-q6">Respuesta correcta: <strong>c) <code>rs.getString("nombre")</code></strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>7. Al usar un <code>PreparedStatement</code>, ¿cómo se suelen representar los parámetros en la sentencia SQL antes de asignarles valor?</p>
+                <label><input type="radio" name="q7" value="a"> Con el símbolo <code>$</code> seguido de un número (ej: <code>$1</code>).</label><br>
+                <label><input type="radio" name="q7" value="b"> Con el símbolo <code>:</code> seguido del nombre del parámetro (ej: <code>:nombre_param</code>).</label><br>
+                <label><input type="radio" name="q7" value="c"> Con el símbolo <code>?</code> (signo de interrogación).</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q7" value="d"> Con el símbolo <code>@</code> seguido de un identificador (ej: <code>@param1</code>).</label><br>
+                <span class="respuesta-feedback" id="feedback-q7">Respuesta correcta: <strong>c) Con el símbolo <code>?</code> (signo de interrogación).</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>8. El acrónimo CRUD hace referencia a un conjunto de operaciones que incluyen:</p>
+                <label><input type="radio" name="q8" value="a"> Consultas y movimientos de datos.</label><br>
+                <label><input type="radio" name="q8" value="b"> Inserción, consultas, extracción, lectura y creación de datos.</label><br>
+                <label><input type="radio" name="q8" value="c"> Borrado, eliminación, actualización, consulta y copias de seguridad de los datos.</label><br>
+                <label><input type="radio" name="q8" value="d"> Eliminación, inserción, actualización y consulta de datos.</label><br> <!-- Correcta -->
+                <span class="respuesta-feedback" id="feedback-q8">Respuesta correcta: <strong>d) Eliminación, inserción, actualización y consulta de datos.</strong> (Delete, Create, Update, Read)</span>
+            </div>
+
+            <div class="quiz-question">
+                <p>9. La técnica de mapeo objeto-relacional hace referencia a:</p>
+                <label><input type="radio" name="q9" value="a"> Tratar los objetos de una aplicación y las relaciones (asociaciones) que existen entre ellos.</label><br>
+                <label><input type="radio" name="q9" value="b"> Dibujar un mapa o diagrama que muestre todas las clases y objetos que intervienen en una aplicación.</label><br>
+                <label><input type="radio" name="q9" value="c"> Convertir cada atributo de un objeto en un campo de un registro en una base de datos relacional y viceversa.</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q9" value="d"> Tratar todos los mapas relacionales como si fueran objetos de una clase DAO.</label><br>
+                <span class="respuesta-feedback" id="feedback-q9">Respuesta correcta: <strong>c) Convertir cada atributo de un objeto en un campo de un registro en una base de datos relacional y viceversa.</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>10. ¿Cuál es el principal objetivo del patrón DAO (Data Access Object) en el contexto de JDBC?</p>
+                <label><input type="radio" name="q10" value="a"> Mejorar el rendimiento de las consultas SQL exclusivamente.</label><br>
+                <label><input type="radio" name="q10" value="b"> Encapsular la lógica de acceso a datos, separándola de la lógica de negocio.</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q10" value="c"> Reemplazar completamente la necesidad de escribir sentencias SQL.</label><br>
+                <label><input type="radio" name="q10" value="d"> Gestionar automáticamente las transacciones de la base de datos.</label><br>
+                <span class="respuesta-feedback" id="feedback-q10">Respuesta correcta: <strong>b) Encapsular la lógica de acceso a datos, separándola de la lógica de negocio.</strong></span>
+            </div>
+
+
+            <button type="button" onclick="mostrarResultados()">Ver Respuestas</button>
+            <button type="button" class="secondary" onclick="ocultarResultados()">Ocultar Respuestas</button>
+
+        </form>
+
+        <div class="back-link">
+            <br>
+            <a href="bbdd.html">← Volver a JDBC</a> <!-- Actualiza este enlace si es necesario -->
+        </div>
+
+        <footer>
+             <p>Material de estudio interactivo - <a href="#">Alicia</a></p>
+        </footer>
+
+    </div>
+
+    <script>
+        function mostrarResultados() {
+            const feedbacks = document.querySelectorAll('.respuesta-feedback');
+            feedbacks.forEach(span => {
+                span.style.display = 'block';
+            });
+             const mostrarBtn = document.querySelector('button[onclick="mostrarResultados()"]');
+             if(mostrarBtn) mostrarBtn.disabled = true;
+             const ocultarBtn = document.querySelector('button[onclick="ocultarResultados()"]');
+             if(ocultarBtn) ocultarBtn.disabled = false;
+        }
+
+        function ocultarResultados() {
+            const feedbacks = document.querySelectorAll('.respuesta-feedback');
+            feedbacks.forEach(span => {
+                span.style.display = 'none';
+            });
+            const mostrarBtn = document.querySelector('button[onclick="mostrarResultados()"]');
+            if(mostrarBtn) mostrarBtn.disabled = false;
+             const ocultarBtn = document.querySelector('button[onclick="ocultarResultados()"]');
+             if(ocultarBtn) ocultarBtn.disabled = true;
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            ocultarResultados();
+            const ocultarBtn = document.querySelector('button[onclick="ocultarResultados()"]');
+            if(ocultarBtn) ocultarBtn.disabled = true;
+        });
+    </script>
+
+</body>
+</html>

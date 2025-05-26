@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Test POO y UML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="back-link">
+            <a href="home.html">← Volver al Menú Principal</a>
+        </div>
+
+        <h1>Test de Repaso: POO y UML</h1>
+
+        <!-- Puedes añadir un enlace para volver si esta página es parte de un sitio mayor -->
+        <!-- <div class="back-link"><a href="index.html">← Volver al menú</a></div> -->
+
+        <form id="quizForm">
+
+            <div class="quiz-question"> 
+                <p>1. ¿Qué pilar de la POO permite a una clase hija heredar características de una clase padre?</p>
+                <label><input type="radio" name="q1" value="a"> Encapsulación</label><br>
+                <label><input type="radio" name="q1" value="b"> Abstracción</label><br>
+                <label><input type="radio" name="q1" value="c"> Herencia</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q1" value="d"> Polimorfismo</label><br>
+                <span class="respuesta-feedback" id="feedback-q1">Respuesta correcta: <strong>c) Herencia</strong></span>
+            </div>
+
+            <div class="quiz-question">
+                <p>2. En UML, ¿qué símbolo de visibilidad representa 'privado'?</p>
+                <label><input type="radio" name="q2" value="a"> +</label><br>
+                <label><input type="radio" name="q2" value="b"> #</label><br>
+                <label><input type="radio" name="q2" value="c"> ~</label><br>
+                <label><input type="radio" name="q2" value="d"> -</label><br> <!-- Correcta -->
+                <span class="respuesta-feedback" id="feedback-q2">Respuesta correcta: <strong>d) -</strong></span>
+            </div>
+
+            <div class="quiz-question"> 
+                <p>3. ¿Qué palabra clave se usa en Java para indicar que una clase implementa una interfaz?</p>
+                <label><input type="radio" name="q3" value="a"> extends</label><br>
+                <label><input type="radio" name="q3" value="b"> implements</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q3" value="c"> inherits</label><br>
+                <label><input type="radio" name="q3" value="d"> interface</label><br>
+                <span class="respuesta-feedback" id="feedback-q3">Respuesta correcta: <strong>b) implements</strong></span>
+            </div>
+
+            <div class="quiz-question"> 
+                <p>4. Una variable declarada como 'final' en Java...</p>
+                <label><input type="radio" name="q4" value="a"> Puede cambiar su valor múltiples veces.</label><br>
+                <label><input type="radio" name="q4" value="b"> Solo puede ser usada dentro de métodos estáticos.</label><br>
+                <label><input type="radio" name="q4" value="c"> No puede cambiar su valor una vez asignado (es constante).</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q4" value="d"> Debe ser de tipo String.</label><br>
+                <span class="respuesta-feedback" id="feedback-q4">Respuesta correcta: <strong>c) No puede cambiar su valor una vez asignado (es constante).</strong></span>
+            </div>
+             <div class="quiz-question"> 
+                <p>5. ¿Qué relación UML representa la dependencia de ciclo de vida más fuerte (parte-de)?</p>
+                <label><input type="radio" name="q5" value="a"> Asociación</label><br>
+                <label><input type="radio" name="q5" value="b"> Agregación (Rombo hueco)</label><br>
+                <label><input type="radio" name="q5" value="c"> Composición (Rombo relleno)</label><br> <!-- Correcta -->
+                <label><input type="radio" name="q5" value="d"> Dependencia (Flecha discontinua)</label><br>
+                <span class="respuesta-feedback" id="feedback-q5">Respuesta correcta: <strong>c) Composición (Rombo relleno)</strong></span>
+            </div>
+
+
+            <button type="button" onclick="mostrarResultados()">Ver Respuestas</button>
+            <!-- Si quieres el botón secundario: -->
+            <button type="button" class="secondary" onclick="ocultarResultados()">Ocultar Respuestas</button>
+
+        </form>
+
+        <div class="back-link">
+            <br>
+            <a href="poo.html">← Volver a POO y UML</a>
+        </div>
+
+        <footer>
+            <p>Material de estudio interactivo - <a href="#">Alicia</a></p>
+        </footer>
+
+    </div> 
+
+    <script>
+        function mostrarResultados() {
+            // Mostramos todos los feedbacks
+            const feedbacks = document.querySelectorAll('.respuesta-feedback');
+            feedbacks.forEach(span => {
+                span.style.display = 'block'; // Mostrar como bloque para que ocupe su línea
+            });
+
+            // Deshabilitar el botón después de usarlo para evitar clics repetidos
+            event.target.disabled = true;
+        }
+
+
+        function ocultarResultados() {
+            const feedbacks = document.querySelectorAll('.respuesta-feedback');
+            feedbacks.forEach(span => {
+                span.style.display = 'none';
+            });
+            // Habilitar el botón de mostrar de nuevo si lo deshabilitaste
+            document.querySelector('button[onclick="mostrarResultados()"]').disabled = false;
+        }
+    
+    </script>
+
+</body>
+</html>
